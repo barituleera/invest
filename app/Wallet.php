@@ -11,8 +11,18 @@ class Wallet extends Model
     //
     protected $guarded = [];
 
-    public function user(): HasOne
+    // public function user(): HasOne
+    // {
+    //    return $this->hasOne(User::class, 'user_id', 'id');
+    // }
+
+    /**
+     * Get the user that owns the Wallet
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function user(): BelongsTo
     {
-       return $this->hasOne(User::class, 'user_id', 'id');
+        return $this->belongsTo(User::class, 'user_id', 'id');
     }
 }

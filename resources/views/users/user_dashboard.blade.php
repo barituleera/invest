@@ -29,7 +29,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4 mt-3 mb-3">
+        <div class="col-md-4 mt-3 mb-3 d-none">
             <div class="card">
                 <div class="card-body bg-dark col-12">
                     <p class="text-warning">Bonus</p>

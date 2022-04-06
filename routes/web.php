@@ -1,5 +1,6 @@
 <?php
 
+use App\Mail\NotificationMail;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -20,6 +21,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'UserController@home')->name('welcome');
 
+Route::get('/mail', function () {
+    // return new NotificationMail();
+    // return "90";
+});
+
 Auth::routes();
 Auth::routes(['verify' => true]);
 Route::get('/home', 'HomeController@index')->name('home');
@@ -39,7 +45,8 @@ Route::group(['prefix' => 'dashboard', 'middleware' => ['auth', 'verified', 'use
     Route::get('/change-password', 'UserController@passwordView')->name('users.changepassword');
     Route::post('/update-password', 'UserController@updatePass')->name('users.updatepass');
     // Route::get('/my-referrals', 'UserController@referralView')->name('users.referrals');
-
+// 785
+// 90695349639
 });
 
 
